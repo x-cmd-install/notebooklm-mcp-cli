@@ -7,15 +7,15 @@ about:
   head: 42634c3
   archived: false
   latestVersion: v0.10.1
-  collectedAt: 2026-09-04T19:37:51Z
+  collectedAt: 2026-09-04T20:54:35Z
 timeline:
   created: 2025-12-23
   lastCommit: 2026-09-03
   lastRelease: 2026-09-03
 popularity:
-  star: 6020
+  star: 6021
   watcher: 41
-  fork: 923
+  fork: 924
   release: 142
   contributor: 56
   pullRequest: 154
@@ -80,5 +80,33 @@ total:
   openIssue: 0
   commit: 784
 ---
+path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
+collectedAt: 2026-09-04T20:54:36Z
+loc:
+  Python:
+    code: 48655
+    comments: 2141
+    blanks: 9403
+    files: 210
+  Json:
+    code: 79
+    comments: 0
+    blanks: 0
+    files: 1
+  Toml:
+    code: 68
+    comments: 4
+    blanks: 13
+    files: 1
+  Markdown:
+    code: 0
+    comments: 7498
+    blanks: 3448
+    files: 34
+total:
+  code: 50884
+  comments: 10187
+  blanks: 13210
+  files: 246
 ---
 
