@@ -4,7 +4,7 @@
 
 Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.
 
-![notebooklm-mcp-cli](https://repo.x-cmd.io/notebooklm-mcp-cli.svg)
+![notebooklm-mcp-cli](https://repo.x-cmd.io/notebooklm-mcp-cli.svg?lang=zh)
 
 ## 安装
 
@@ -22,11 +22,16 @@ x install notebooklm-mcp-cli
 - **最新版本**: `v0.11.2` (2026-09-08)
 - **最近提交**: 2026-09-08
 - **Release 含资产**: 1 个
-- **发布时间**: 2026-09-08T21:32:02Z
+
+## Release 资产
+
+| 资产 | 大小 | 目标平台 |
+|------|-----:|----------|
+| [notebooklm-mcp-0.11.2.mcpb](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.11.2/notebooklm-mcp-0.11.2.mcpb) | 2.5 KiB | `other` |
 
 ## 流行度
 
-- **Star**: 6,052 · **Fork**: 925 · **开放 issue**: 159 · **贡献者**: 56
+- **Star**: 6,057 · **Fork**: 925 · **开放 issue**: 159 · **贡献者**: 56
 
 ## 累计统计
 
@@ -60,4 +65,4 @@ notebooklm-mcp-cli 的安装元数据由 [x-cmd/install](https://github.com/x-cm
 
 本页面的数据（card / loc / scorecard / release）由 [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) 自动采集，每日重新生成。**安装行为**（版本选择、平台差异、依赖处理）的改进应提交到上游索引。
 
-_数据快照: `data/card/260910.yml` · 2026-09-10T05:20:46Z._
+_数据快照: `data/card/260910.yml` · 2026-09-10T16:53:21Z._
