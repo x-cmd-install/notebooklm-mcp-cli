@@ -36,7 +36,7 @@ Total: **49,421** lines of code across **254** files in the top 5 languages.
 
 ## Popularity
 
-- **Stars**: 6,059 · **Forks**: 925 · **Open issues**: 159 · **Contributors**: 56
+- **Stars**: 6,059 · **Forks**: 924 · **Open issues**: 159 · **Contributors**: 56
 
 ## Totals (cumulative)
 
@@ -68,4 +68,4 @@ Install metadata for notebooklm-mcp-cli lives in the [x-cmd/install](https://git
 
 The data on this page (card / loc / scorecard / release) is auto-collected by [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) and is regenerated daily. Improvements to *install behaviour* (which version gets installed, platform-specific quirks, dependencies) belong upstream in the index.
 
-_Snapshot: `data/card/260911.yml` · 2026-09-11T00:04:18Z._
+_Snapshot: `data/card/260911.yml` · 2026-09-11T05:07:19Z._
