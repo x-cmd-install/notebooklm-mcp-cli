@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/385076977",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/385076977/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/385076977/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.11.2",
-  "id": 385076977,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/387665097",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/387665097/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/387665097/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.11.3",
+  "id": 387665097,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4W887x",
-  "tag_name": "v0.11.2",
+  "node_id": "RE_kwDOQtfMFM4XG0zJ",
+  "tag_name": "v0.11.3",
   "target_commitish": "main",
-  "name": "v0.11.2 - Security release",
+  "name": "v0.11.3 - Plan usage reporting",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-09-08T21:31:40Z",
-  "updated_at": "2026-09-08T21:33:30Z",
-  "published_at": "2026-09-08T21:32:02Z",
+  "created_at": "2026-09-12T18:28:43Z",
+  "updated_at": "2026-09-12T18:32:56Z",
+  "published_at": "2026-09-12T18:31:26Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/551354799",
-      "id": 551354799,
-      "node_id": "RA_kwDOQtfMFM4g3QGv",
-      "name": "notebooklm-mcp-0.11.2.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/559748765",
+      "id": 559748765,
+      "node_id": "RA_kwDOQtfMFM4hXRad",
+      "name": "notebooklm-mcp-0.11.3.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -65,16 +65,16 @@
       },
       "content_type": "application/octet-stream",
       "state": "uploaded",
-      "size": 2545,
-      "digest": "sha256:352b9f31014474f451645b5725a59e8edd628013ae480a249dd611a399f22867",
-      "download_count": 97,
-      "created_at": "2026-09-08T21:33:30Z",
-      "updated_at": "2026-09-08T21:33:30Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.11.2/notebooklm-mcp-0.11.2.mcpb"
+      "size": 2546,
+      "digest": "sha256:ad90e583d244b02545bacb7c88f5e9ee6aa62c3b12d923a11b45d66c3186c54f",
+      "download_count": 7,
+      "created_at": "2026-09-12T18:32:56Z",
+      "updated_at": "2026-09-12T18:32:56Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.11.3/notebooklm-mcp-0.11.3.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.11.2",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.11.2",
-  "body": "\nSecurity release. Recommended for anyone who set up WSL login, and for anyone\nwho runs the MCP server with debug logging.\n\n### Security\n\n- **WSL CDP bridge is now scoped to the WSL virtual adapter.** The `netsh portproxy`\n  that bridges WSL to Windows Chrome listens on `0.0.0.0`, so the Windows Firewall\n  rule is the only boundary in front of Chrome DevTools Protocol, which has no\n  authentication. The rule printed by `nlm login --wsl` and built by\n  `create_firewall_rule()` now carries `-InterfaceAlias \"vEthernet (WSL)\"`, so traffic\n  arriving on Wi-Fi or Ethernet cannot match it. Interface scoping is what does the\n  work here: the WSL adapter usually lands on the **Public** network profile, so\n  profile filtering cannot separate it from a real network. `-RemoteAddress LocalSubnet`\n  is kept as a second layer. The privilege-failure fallback command previously printed\n  no `-RemoteAddress` at all, which defaults to `Any`; it is now scoped like the others.\n  Thanks to **@Naor-Peretz** for the report (GHSA-v558-4774-r6wq).\n\n  **Existing WSL users must act.** The firewall rule and the port proxy are created by\n  you, in Windows, so upgrading cannot change them. See\n  [Removing the bridge](./docs/WSL_SETUP.md#removing-the-bridge) to check whether your\n  rule is scoped and to replace it if not.\n\n- **`debug_page.html` is now created private.** The debug dump of the authenticated\n  page was written with the process umask and narrowed with `chmod` afterwards, leaving\n  a window in which it was world-readable, and the `chmod` failure was suppressed\n  silently. It is now created `0o600` atomically with `os.open`, matching the pattern\n  already used for credential writes in `core/auth.py` and `utils/cdp.py`.\n  Thanks to **@Naor-Peretz** for the report (GHSA-747w-q55c-m74m).\n\n- **MCP debug logging now redacts responses, not only requests.** Request parameters\n  were sanitized while responses were serialized whole, with a 1000-character\n  truncation as the only limit. Redaction is now recursive, covers nested dicts and\n  lists in both requests and responses, and matches sensitive key names by substring\n  (`token`, `secret`, `password`, `credential`, `apikey`, `authorization`, `bearer`\n  and others) rather than an exact five-key denylist that failed open for anything\n  added later. Thanks to **@Naor-Peretz** for the report (GHSA-jhrc-qgxv-3c2g).\n\n### Added\n\n- `SECURITY.md` with a private reporting channel, response targets, and scope.\n- `.github/dependabot.yml` for weekly Python and GitHub Actions updates.\n- Regression tests: `tests/test_log_redaction.py`, `tests/test_debug_page_permissions.py`,\n  `tests/test_wsl_firewall_scope.py`.\n\n### Changed\n\n- `docs/WSL_SETUP.md` now documents the teardown commands for the firewall rule and the\n  port proxy, states the exposure honestly instead of claiming external hosts cannot\n  reach the port, and explains how to replace a pre-0.11.2 rule.\n- The `utils/wsl.py` module docstring described the pre-0.5.24 architecture, in which\n  Chrome bound `--remote-debugging-address=0.0.0.0`, and referenced\n  `docs/SECURITY_REMEDIATION_PLAN.md`, which is not in the repository. Rewritten to\n  describe the port proxy and its actual limits.\n\n",
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.11.3",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.11.3",
+  "body": "\nPatch release adding visibility into the account's compute-based Gemini\nNotebook allowance.\n\n### Added\n\n- **Plan usage reporting** — `nlm usage` and the MCP `usage_get` tool now report\n  the measured percentage used, percentage remaining, reset timestamp, and\n  subscription tier for the rolling and weekly usage windows. The report keeps\n  the two windows deterministic even when the backend returns them in a\n  different order. Thanks to **@WAOmaster** for the implementation in\n  [PR #327](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/327).\n\n### Fixed\n\n- **Quota guidance in the bundled skill** — The skill, AI help output, and\n  linked references now direct assistants to check `nlm usage` or `usage_get`\n  before quota-limited work and distinguish an expired session from an\n  exhausted allowance.\n\n### Changed\n\n- Updated the bundled skill and generated command reference to document the\n  rolling and weekly compute windows, UTC reset timestamps, JSON output shape,\n  and the current 49-tool MCP surface.\n\n### Removed\n\n- No functionality was removed in this patch release.\n\n### Verification\n\n- Release-gate test selection (`not e2e`): 1,590 passed, 38 skipped, 1 deselected.\n- Live CLI and stdio MCP checks returned both usage windows and the active\n  subscription tier successfully.\n\n",
   "mentions_count": 1
 }
