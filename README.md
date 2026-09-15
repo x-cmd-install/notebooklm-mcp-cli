@@ -36,7 +36,7 @@ Total: **50,014** lines of code across **263** files in the top 5 languages.
 
 ## Popularity
 
-- **Stars**: 6,076 · **Forks**: 929 · **Open issues**: 159 · **Contributors**: 58
+- **Stars**: 6,085 · **Forks**: 929 · **Open issues**: 159 · **Contributors**: 58
 
 ## Totals (cumulative)
 
@@ -46,12 +46,12 @@ Total: **50,014** lines of code across **263** files in the top 5 languages.
 
 | Window | Since | Releases | Merged PRs | Open PRs | Closed issues | Open issues | Commits |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 30d | 2026-08-15 | 10 | 0 | 0 | 0 | 0 | 0 |
-| last60d | 2026-07-16 | 24 | 0 | 0 | 0 | 0 | 0 |
-| 90d | 2026-06-16 | 35 | 0 | 0 | 0 | 0 | 0 |
-| last180d | 2026-03-18 | 84 | 0 | 0 | 0 | 0 | 0 |
-| 360d | 2025-09-19 | 100 | 0 | 0 | 0 | 0 | 0 |
-| last720d | 2024-09-24 | 100 | 0 | 0 | 0 | 0 | 0 |
+| 30d | 2026-08-16 | 10 | 0 | 0 | 0 | 0 | 0 |
+| last60d | 2026-07-17 | 23 | 0 | 0 | 0 | 0 | 0 |
+| 90d | 2026-06-17 | 33 | 0 | 0 | 0 | 0 | 0 |
+| last180d | 2026-03-19 | 83 | 0 | 0 | 0 | 0 | 0 |
+| 360d | 2025-09-20 | 100 | 0 | 0 | 0 | 0 | 0 |
+| last720d | 2024-09-25 | 100 | 0 | 0 | 0 | 0 | 0 |
 
 ## Release assets
 
@@ -68,4 +68,4 @@ Install metadata for notebooklm-mcp-cli lives in the [x-cmd/install](https://git
 
 The data on this page (card / loc / scorecard / release) is auto-collected by [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) and is regenerated daily. Improvements to *install behaviour* (which version gets installed, platform-specific quirks, dependencies) belong upstream in the index.
 
-_Snapshot: `data/card/260914.yml` · 2026-09-14T05:30:35Z._
+_Snapshot: `data/card/260915.yml` · 2026-09-15T05:42:17Z._
