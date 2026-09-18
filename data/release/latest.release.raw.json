@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/388085525",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/388085525/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/388085525/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.11.4",
-  "id": 388085525,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/391035280",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/391035280/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/391035280/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.11.5",
+  "id": 391035280,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4XIbcV",
-  "tag_name": "v0.11.4",
+  "node_id": "RE_kwDOQtfMFM4XTrmQ",
+  "tag_name": "v0.11.5",
   "target_commitish": "main",
-  "name": "v0.11.4 Profile-Isolated Usage Release",
+  "name": "v0.11.5",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-09-14T00:44:53Z",
-  "updated_at": "2026-09-14T00:46:20Z",
-  "published_at": "2026-09-14T00:44:55Z",
+  "created_at": "2026-09-17T20:21:13Z",
+  "updated_at": "2026-09-17T20:25:08Z",
+  "published_at": "2026-09-17T20:23:05Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/562228929",
-      "id": 562228929,
-      "node_id": "RA_kwDOQtfMFM4hgu7B",
-      "name": "notebooklm-mcp-0.11.4.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/571043707",
+      "id": 571043707,
+      "node_id": "RA_kwDOQtfMFM4iCW97",
+      "name": "notebooklm-mcp-0.11.5.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -65,16 +65,16 @@
       },
       "content_type": "application/octet-stream",
       "state": "uploaded",
-      "size": 2546,
-      "digest": "sha256:e595dd212e71be9142f96dd81e60b66445cabb36248e32b4dad8d14655a53bbb",
-      "download_count": 126,
-      "created_at": "2026-09-14T00:46:20Z",
-      "updated_at": "2026-09-14T00:46:20Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.11.4/notebooklm-mcp-0.11.4.mcpb"
+      "size": 2547,
+      "digest": "sha256:5727d2974822ed68c9895e82e9c474ac812d02fb27a67117cf04ed129b3a2f56",
+      "download_count": 8,
+      "created_at": "2026-09-17T20:24:36Z",
+      "updated_at": "2026-09-17T20:25:08Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.11.5/notebooklm-mcp-0.11.5.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.11.4",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.11.4",
-  "body": "# v0.11.4 Profile-Isolated Usage Release\n\nThis patch release adds account-isolated usage checks for named authentication\nprofiles. Thanks to **@insane66613** for the contribution in\n[PR #328](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/328).\n\n## Added\n\n- `nlm usage --profile <name>` and `nlm usage -p <name>` inspect a saved\n  profile without switching the configured default.\n- `usage_get(profile=\"<name>\")` provides the same per-call selection over MCP.\n\n## Fixed\n\n- Explicit profiles take precedence over `NOTEBOOKLM_COOKIES`.\n- Missing or invalid profiles return an error instead of falling back to another\n  account.\n\n## Known limitation\n\n- Google may not return usage windows for Enterprise/Workspace accounts on the\n  “Pro” tier. `nlm usage` and `usage_get` therefore cannot show allowance data\n  for those accounts, while personal Pro accounts can return the normal usage\n  report.\n\n## Verification\n\n- Full non-E2E suite: 1,609 passed, 38 skipped, 1 deselected.\n- Ruff lint and formatting checks passed.\n",
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.11.5",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.11.5",
+  "body": "Patch release hardening the headless auth refresh and account switching.\n\n### Added\n- `NOTEBOOKLM_DISABLE_HEADLESS_REFRESH=1` disables the automatic Layer-3 self-heal and `nlm auth refresh`, for Google Workspace accounts whose session is revoked server-side when the saved browser profile is relaunched (#330).\n\n### Fixed\n- Headless refresh now picks a free port instead of a hardcoded 9223, so a foreign process already holding that port can't make Chrome bind elsewhere while the tool probes the wrong CDP listener (#330).\n- `nlm login --clear` now always clears and re-authenticates instead of returning early when the saved session still validates, so switching accounts actually wipes the profile (#330).\n\nThanks to **@cr4shOverr1de** for the detailed report in #330.\n",
   "mentions_count": 1
 }
