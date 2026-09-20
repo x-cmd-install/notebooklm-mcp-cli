@@ -4,7 +4,7 @@
 
 Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills.
 
-![notebooklm-mcp-cli](https://repo.x-cmd.io/notebooklm-mcp-cli.svg)
+[![x-cmd/install — notebooklm-mcp-cli Code Quality Monitoring Repo Card](https://repo.x-cmd.io/notebooklm-mcp-cli.svg)](https://x-cmd.com/install/notebooklm-mcp-cli)
 
 ## Install
 
@@ -36,7 +36,7 @@ Total: **50,111** lines of code across **264** files in the top 5 languages.
 
 ## Popularity
 
-- **Stars**: 6,098 · **Forks**: 929 · **Open issues**: 161 · **Contributors**: 58
+- **Stars**: 6,111 · **Forks**: 931 · **Open issues**: 161 · **Contributors**: 58
 
 ## Totals (cumulative)
 
@@ -46,12 +46,12 @@ Total: **50,111** lines of code across **264** files in the top 5 languages.
 
 | Window | Since | Releases | Merged PRs | Open PRs | Closed issues | Open issues | Commits |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 30d | 2026-08-19 | 10 | 0 | 0 | 0 | 0 | 0 |
-| last60d | 2026-07-20 | 23 | 0 | 0 | 0 | 0 | 0 |
-| 90d | 2026-06-20 | 33 | 0 | 0 | 0 | 0 | 0 |
-| last180d | 2026-03-22 | 82 | 0 | 0 | 0 | 0 | 0 |
-| 360d | 2025-09-23 | 100 | 0 | 0 | 0 | 0 | 0 |
-| last720d | 2024-09-28 | 100 | 0 | 0 | 0 | 0 | 0 |
+| 30d | 2026-08-21 | 8 | 0 | 0 | 0 | 0 | 0 |
+| last60d | 2026-07-22 | 22 | 0 | 0 | 0 | 0 | 0 |
+| 90d | 2026-06-22 | 33 | 0 | 0 | 0 | 0 | 0 |
+| last180d | 2026-03-24 | 79 | 0 | 0 | 0 | 0 | 0 |
+| 360d | 2025-09-25 | 100 | 0 | 0 | 0 | 0 | 0 |
+| last720d | 2024-09-30 | 100 | 0 | 0 | 0 | 0 | 0 |
 
 ## Release assets
 
@@ -68,4 +68,4 @@ Install metadata for notebooklm-mcp-cli lives in the [x-cmd/install](https://git
 
 The data on this page (card / loc / scorecard / release) is auto-collected by [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) and is regenerated daily. Improvements to *install behaviour* (which version gets installed, platform-specific quirks, dependencies) belong upstream in the index.
 
-_Snapshot: `data/card/260918.yml` · 2026-09-18T05:20:09Z._
+_Snapshot: `data/card/260920.yml` · 2026-09-20T05:23:13Z._
