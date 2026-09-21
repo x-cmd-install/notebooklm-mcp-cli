@@ -14,14 +14,14 @@ x install notebooklm-mcp-cli
 
 ## Code insight
 
-Total: **50,111** lines of code across **264** files in the top 5 languages.
+Total: **50,123** lines of code across **264** files in the top 5 languages.
 
 | Language | Code | Comments | Blanks | Files |
 |----------|-----:|---------:|-------:|------:|
-| Python | 49,964 | 2,218 | 9,732 | 226 |
+| Python | 49,976 | 2,218 | 9,734 | 226 |
 | Json | 79 | 0 | 0 | 1 |
 | Toml | 68 | 4 | 13 | 1 |
-| Markdown | 0 | 7,941 | 3,612 | 36 |
+| Markdown | 0 | 7,955 | 3,618 | 36 |
 
 ## Source
 
@@ -30,34 +30,34 @@ Total: **50,111** lines of code across **264** files in the top 5 languages.
 
 ## Release
 
-- **Latest**: `v0.11.5` (2026-09-17)
-- **Last commit**: 2026-09-17
+- **Latest**: `v0.11.6` (2026-09-20)
+- **Last commit**: 2026-09-20
 - **Assets in release**: 1
 
 ## Popularity
 
-- **Stars**: 6,111 · **Forks**: 931 · **Open issues**: 161 · **Contributors**: 58
+- **Stars**: 6,118 · **Forks**: 931 · **Open issues**: 161 · **Contributors**: 58
 
 ## Totals (cumulative)
 
-- **Releases**: 148 · **Merged PRs**: 120 · **Open PRs**: 0 · **Closed issues**: 159 · **Open issues**: 2 · **Commits**: 807
+- **Releases**: 149 · **Merged PRs**: 120 · **Open PRs**: 0 · **Closed issues**: 159 · **Open issues**: 2 · **Commits**: 809
 
 ## Recent activity
 
 | Window | Since | Releases | Merged PRs | Open PRs | Closed issues | Open issues | Commits |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 30d | 2026-08-21 | 8 | 0 | 0 | 0 | 0 | 0 |
-| last60d | 2026-07-22 | 22 | 0 | 0 | 0 | 0 | 0 |
-| 90d | 2026-06-22 | 33 | 0 | 0 | 0 | 0 | 0 |
-| last180d | 2026-03-24 | 79 | 0 | 0 | 0 | 0 | 0 |
-| 360d | 2025-09-25 | 100 | 0 | 0 | 0 | 0 | 0 |
-| last720d | 2024-09-30 | 100 | 0 | 0 | 0 | 0 | 0 |
+| 30d | 2026-08-22 | 9 | 0 | 0 | 0 | 0 | 0 |
+| last60d | 2026-07-23 | 22 | 0 | 0 | 0 | 0 | 0 |
+| 90d | 2026-06-23 | 34 | 0 | 0 | 0 | 0 | 0 |
+| last180d | 2026-03-25 | 80 | 0 | 0 | 0 | 0 | 0 |
+| 360d | 2025-09-26 | 100 | 0 | 0 | 0 | 0 | 0 |
+| last720d | 2024-10-01 | 100 | 0 | 0 | 0 | 0 | 0 |
 
 ## Release assets
 
 | Asset | Size | Target |
 |-------|-----:|--------|
-| [notebooklm-mcp-0.11.5.mcpb](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.11.5/notebooklm-mcp-0.11.5.mcpb) | 2.5 KiB | `other` |
+| [notebooklm-mcp-0.11.6.mcpb](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.11.6/notebooklm-mcp-0.11.6.mcpb) | 2.5 KiB | `other` |
 
 ## Improve this data
 
@@ -68,4 +68,4 @@ Install metadata for notebooklm-mcp-cli lives in the [x-cmd/install](https://git
 
 The data on this page (card / loc / scorecard / release) is auto-collected by [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) and is regenerated daily. Improvements to *install behaviour* (which version gets installed, platform-specific quirks, dependencies) belong upstream in the index.
 
-_Snapshot: `data/card/260920.yml` · 2026-09-20T05:23:13Z._
+_Snapshot: `data/card/260921.yml` · 2026-09-21T05:30:36Z._
