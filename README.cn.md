@@ -14,14 +14,14 @@ x install notebooklm-mcp-cli
 
 ## 代码洞察
 
-合计: **69,543** 行代码（覆盖前 5 种语言、共 **339** 个文件）。
+合计: **70,953** 行代码（覆盖前 5 种语言、共 **344** 个文件）。
 
 | 语言 | 代码 | 注释 | 空行 | 文件数 |
 |------|-----:|-----:|-----:|------:|
-| Python | 69,381 | 2,865 | 13,871 | 301 |
+| Python | 70,791 | 2,865 | 14,176 | 306 |
 | Json | 83 | 0 | 0 | 1 |
 | Toml | 79 | 5 | 13 | 1 |
-| Markdown | 0 | 9,159 | 4,004 | 36 |
+| Markdown | 0 | 9,193 | 4,018 | 36 |
 
 ## 源代码
 
@@ -30,37 +30,34 @@ x install notebooklm-mcp-cli
 
 ## 发布
 
-- **最新版本**: `v0.15.3` (2026-10-05)
+- **最新版本**: `v0.15.4` (2026-10-06)
 - **最近提交**: 2026-10-06
-- **Release 含资产**: 4 个
+- **Release 含资产**: 1 个
 
 ## 流行度
 
-- **Star**: 6,233 · **Fork**: 942 · **开放 issue**: 169 · **贡献者**: 60
+- **Star**: 6,243 · **Fork**: 944 · **开放 issue**: 169 · **贡献者**: 60
 
 ## 累计统计
 
-- **发布数**: 157 · **已合并 PR**: 133 · **开放 PR**: 0 · **已关闭 issue**: 169 · **开放 issue**: 0 · **提交数**: 919
+- **发布数**: 158 · **已合并 PR**: 145 · **开放 PR**: 0 · **已关闭 issue**: 169 · **开放 issue**: 0 · **提交数**: 948
 
 ## 最近活动
 
 | 时间窗口 | 起始 | 发布 | 已合并 PR | 开放 PR | 已关闭 issue | 开放 issue | 提交 |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 30d | 2026-09-06 | 15 | 0 | 0 | 0 | 0 | 0 |
-| last60d | 2026-08-07 | 24 | 0 | 0 | 0 | 0 | 0 |
-| 90d | 2026-07-08 | 38 | 0 | 0 | 0 | 0 | 0 |
-| last180d | 2026-04-09 | 77 | 0 | 0 | 0 | 0 | 0 |
-| 360d | 2025-10-11 | 100 | 0 | 0 | 0 | 0 | 0 |
-| last720d | 2024-10-16 | 100 | 0 | 0 | 0 | 0 | 0 |
+| 30d | 2026-09-07 | 16 | 0 | 0 | 0 | 0 | 0 |
+| last60d | 2026-08-08 | 25 | 0 | 0 | 0 | 0 | 0 |
+| 90d | 2026-07-09 | 39 | 0 | 0 | 0 | 0 | 0 |
+| last180d | 2026-04-10 | 76 | 0 | 0 | 0 | 0 | 0 |
+| 360d | 2025-10-12 | 100 | 0 | 0 | 0 | 0 | 0 |
+| last720d | 2024-10-17 | 100 | 0 | 0 | 0 | 0 | 0 |
 
 ## Release 资产
 
 | 资产 | 大小 | 目标平台 |
 |------|-----:|----------|
-| [nlm-skill.zip](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.15.3/nlm-skill.zip) | 63.1 KiB | `other` |
-| [notebooklm-mcp-0.15.3.mcpb](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.15.3/notebooklm-mcp-0.15.3.mcpb) | 2.5 KiB | `other` |
-| [notebooklm_mcp_cli-0.15.3-py3-none-any.whl](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.15.3/notebooklm_mcp_cli-0.15.3-py3-none-any.whl) | 535.5 KiB | `other` |
-| [notebooklm_mcp_cli-0.15.3.tar.gz](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.15.3/notebooklm_mcp_cli-0.15.3.tar.gz) | 1.1 MiB | `native/unknown` |
+| [notebooklm-mcp-0.15.4.mcpb](https://github.com/jacob-bd/notebooklm-mcp-cli/releases/download/v0.15.4/notebooklm-mcp-0.15.4.mcpb) | 2.5 KiB | `other` |
 
 ## 改进这些数据
 
@@ -71,4 +68,4 @@ notebooklm-mcp-cli 的安装元数据由 [x-cmd/install](https://github.com/x-cm
 
 本页面的数据（card / loc / scorecard / release）由 [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) 自动采集，每日重新生成。**安装行为**（版本选择、平台差异、依赖处理）的改进应提交到上游索引。
 
-_数据快照: `data/card/261006.yml` · 2026-10-06T06:49:48Z._
+_数据快照: `data/card/261007.yml` · 2026-10-07T06:19:34Z._
