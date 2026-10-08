@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 2606,
       "digest": "sha256:d57cafd27a5e4d23fa9fe77de8af0e7c461b068b5493890424d9a26e2f36305b",
-      "download_count": 12,
+      "download_count": 50,
       "created_at": "2026-10-06T23:31:31Z",
       "updated_at": "2026-10-06T23:31:32Z",
       "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.15.4/notebooklm-mcp-0.15.4.mcpb"
