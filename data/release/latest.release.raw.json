@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/405217733",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/405217733/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/405217733/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.15.4",
-  "id": 405217733,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/413153580",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/413153580/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/413153580/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.15.5",
+  "id": 413153580,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4YJyHF",
-  "tag_name": "v0.15.4",
-  "target_commitish": "1df1e760da5b5208c6f2f33a60ae410b4ba4c37d",
-  "name": "v0.15.4: Windows CI, headless refresh diagnostics, safer concurrent writes",
+  "node_id": "RE_kwDOQtfMFM4YoDks",
+  "tag_name": "v0.15.5",
+  "target_commitish": "f3b8edae99e2826a8537cc0e69319b0f127b958a",
+  "name": "v0.15.5: validated HTTP-only refresh, account-specific MCP refresh, bounded auth recovery",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-10-06T23:12:06Z",
-  "updated_at": "2026-10-06T23:31:32Z",
-  "published_at": "2026-10-06T23:29:31Z",
+  "created_at": "2026-10-14T20:28:21Z",
+  "updated_at": "2026-10-14T20:30:29Z",
+  "published_at": "2026-10-14T20:28:33Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/616953581",
-      "id": 616953581,
-      "node_id": "RA_kwDOQtfMFM4kxfbt",
-      "name": "notebooklm-mcp-0.15.4.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/641577248",
+      "id": 641577248,
+      "node_id": "RA_kwDOQtfMFM4mPbEg",
+      "name": "notebooklm-mcp-0.15.5.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -66,15 +66,15 @@
       "content_type": "application/octet-stream",
       "state": "uploaded",
       "size": 2606,
-      "digest": "sha256:d57cafd27a5e4d23fa9fe77de8af0e7c461b068b5493890424d9a26e2f36305b",
-      "download_count": 196,
-      "created_at": "2026-10-06T23:31:31Z",
-      "updated_at": "2026-10-06T23:31:32Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.15.4/notebooklm-mcp-0.15.4.mcpb"
+      "digest": "sha256:e39699c8876de91b0d3155fec7772f542a0f527db04f46f0e7de790db21ed731",
+      "download_count": 13,
+      "created_at": "2026-10-14T20:30:29Z",
+      "updated_at": "2026-10-14T20:30:29Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.15.5/notebooklm-mcp-0.15.5.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.15.4",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.15.4",
-  "body": "> Windows CI validation, ephemeral CDP port fallback, actionable headless refresh diagnostics, atomic concurrency for aliases and tags, bounded query concurrency, and MCP server version caching.\n> Community release: twelve pull requests from one contributor (see Credits below).\n\n### Added\n\n- **Full test suite runs on Windows in CI.** Added native `windows-latest` runner to GitHub Actions CI, validating test suites on both Windows and Ubuntu to ensure cross-platform portability. Timeout assertions in the tests now tolerate float rounding on Windows (test-only change). ([PR #353](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/353)).\n- **Ephemeral CDP port fallback.** Headless and managed browser authentication now detect when candidate DevTools ports (e.g., 9222, 9223) are occupied or conflicting, automatically falling back to an OS-assigned ephemeral port (`port=0`). ([PR #355](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/355)).\n- **Actionable headless refresh diagnostics.** When run with explicit error raising (`nlm auth refresh` or `raise_on_error=True`), headless authentication now surfaces actionable, safe `AuthenticationError` diagnostics across all failure stages (missing managed profile, browser launch or DevTools websocket errors, signed-out saved profile, page load timeout, missing cookies, or candidate credential rejection by NotebookLM) with clear recovery hints to run `nlm login`. The saved Firefox profile path reports its own failures too, and when several browser backends are tried, the preferred backend's failure is the one shown. Background auto-recovery preserves existing best-effort behavior. ([PR #363](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/363), [PR #364](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/364)).\n\n### Fixed\n\n- **Atomic concurrent updates for aliases and tags.** Writing to `aliases.json` and updating notebook tags now use atomic write replacements and file locking, preventing race conditions and file corruption when multiple CLI commands or MCP tools write concurrently. An unexpected `aliases.json` layout resets to empty instead of crashing, and alias reads still work when the config folder is read-only. ([PR #354](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/354), [PR #359](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/359)).\n- **Managed browser cleanly closes before profile reset.** `nlm login --clear` and reset flows now terminate owned browser processes and release file locks before deleting profile storage, preventing `ResourceWarning` and file lock conflicts on Windows. ([PR #360](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/360)).\n- **Bounded async query concurrency.** The chat and query service now limits how many async queries (`notebook_query_start`) can run at once. The default is 8; set `NOTEBOOKLM_ASYNC_QUERY_MAX_INFLIGHT` to change it (minimum 1). Starting a query beyond the limit returns a retryable \"too many running\" error. Finished queries free their slot, and so does a query whose worker thread fails to start. ([PR #358](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/358)).\n- **CLI auth validation policy aligned with MCP.** CLI login check now aligns with MCP auth policy, properly distinguishing transient network/timeout errors from genuine authentication expiry to prevent false alarms, while caching notebook counts across validation steps. ([PR #356](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/356)).\n- **Isolated concurrent artifact temp files.** Artifact downloads now use isolated, unique temporary filenames per download stream, preventing race conditions or file collision when downloading multiple artifacts simultaneously. Downloaded files keep normal permissions (your umask decides, not owner-only), and the temp file is removed even if a download is cancelled or interrupted. ([PR #357](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/357)).\n- **MCP server info caches PyPI version checks.** `server_info()` in the MCP server now caches PyPI version lookups (24 hours for successful lookups, 5 minutes for failures) behind a thread lock, eliminating up to two seconds of network latency on status and capability checks. ([PR #361](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/361)).\n- **Semantic package version comparison.** CLI update checks and MCP `server_info()` now parse versions using PEP 440 via `packaging.version.Version`, properly handling prereleases (`rc`, `dev`) and local version identifiers. ([PR #362](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/362)).\n- **Plan usage error clarity.** Usage errors now include the account's plan identifier when Gemini Notebook returns no usage windows, rather than implying usage is unavailable only for Enterprise/Workspace accounts ([Issue #352](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/352)).\n\n### Changed\n\n- Updated skill references and authentication documentation with details on headless refresh diagnostics and ephemeral CDP port fallback.\n\n### Removed\n\n- Nothing removed.\n\n### Credits\n\nBig thanks to **@insane66613** for all twelve pull requests in this release: [#353](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/353), [#354](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/354), [#355](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/355), [#356](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/356), [#357](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/357), [#358](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/358), [#359](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/359), [#360](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/360), [#361](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/361), [#362](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/362), [#363](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/363) and [#364](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/364).\n\n",
-  "mentions_count": 1
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.15.5",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.15.5",
+  "body": "### Added\n\n- **Validated HTTP-only refresh.** `nlm auth refresh --http-only --profile <name>` refreshes eligible cookies and page tokens without launching a browser, even when CDP transport is configured. It saves credentials only after a valid authenticated notebook API response, accepts an authenticated account with zero notebooks, and rejects missing or malformed API payloads. This mode cannot renew browser-dependent PSIDTS cookies or revive a fully expired Google login ([PR #370](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/370)).\n- **Account-specific MCP refresh.** `refresh_auth(profile=\"work\")` validates or recovers the requested saved account without switching the active account or replacing another account's MCP client. Calls without a profile preserve the existing behavior ([PR #372](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/372)).\n\n### Fixed\n\n- **Serialized Chromium recovery across processes.** Concurrent CLI and MCP processes use a separate per-profile recovery lock, reuse newer validated credentials, and fail safely on lock timeout instead of launching competing browsers ([PR #369](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/369)).\n- **Bounded automatic browser recovery.** Automatic attempts have a per-profile, per-process cooldown (900 seconds by default) and failure ceiling (3 by default). Concurrent callers share one active attempt and its refreshed tokens, with a bounded 60-second wait. Changed credential revisions or file-mode cookies reset the budget; success clears failures. Explicit CLI/MCP refresh commands bypass these limits. Configure the limits through `NOTEBOOKLM_AUTH_RECOVERY_COOLDOWN_SECONDS` and `NOTEBOOKLM_AUTH_MAX_HEADLESS_FAILURES`; 0 disables the corresponding limit ([PR #371](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/371)).\n- HTTP-only refresh now returns a non-secret typed service result and translates failures into service-layer errors.\n\n### Changed\n\n- Updated authentication, CLI/MCP documentation and the bundled skill with refresh modes, account targeting, recovery limits, and their limitations.\n- Updated the pinned `astral-sh/setup-uv` GitHub Action from 10.2.0 to 10.3.0 in CI, publishing and release checks ([PR #373](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/373)).\n\n### Removed\n\n- Nothing removed.\n\n### Credits\n\nThanks to **@insane66613** for the authentication improvements in [#369](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/369), [#370](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/370), [#371](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/371) and [#372](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/372), and **@dependabot** for [#373](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/373).\n",
+  "mentions_count": 2
 }
