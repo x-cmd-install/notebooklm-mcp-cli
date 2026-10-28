@@ -21,7 +21,7 @@ Total: **72,097** lines of code across **356** files in the top 5 languages.
 | Python | 71,935 | 2,883 | 14,431 | 318 |
 | Json | 83 | 0 | 0 | 1 |
 | Toml | 79 | 5 | 13 | 1 |
-| Markdown | 0 | 9,343 | 4,078 | 36 |
+| Markdown | 0 | 9,346 | 4,080 | 36 |
 
 ## Source
 
@@ -31,27 +31,27 @@ Total: **72,097** lines of code across **356** files in the top 5 languages.
 ## Release
 
 - **Latest**: `v0.15.8` (2026-10-25)
-- **Last commit**: 2026-10-25
+- **Last commit**: 2026-10-27
 - **Assets in release**: 3
 
 ## Popularity
 
-- **Stars**: 6,398 · **Forks**: 960 · **Open issues**: 175 · **Contributors**: 61
+- **Stars**: 6,406 · **Forks**: 961 · **Open issues**: 175 · **Contributors**: 61
 
 ## Totals (cumulative)
 
-- **Releases**: 162 · **Merged PRs**: 154 · **Open PRs**: 0 · **Closed issues**: 175 · **Open issues**: 0 · **Commits**: 964
+- **Releases**: 162 · **Merged PRs**: 156 · **Open PRs**: 0 · **Closed issues**: 175 · **Open issues**: 0 · **Commits**: 967
 
 ## Recent activity
 
 | Window | Since | Releases | Merged PRs | Open PRs | Closed issues | Open issues | Commits |
 |---|---|---:|---:|---:|---:|---:|---:|
-| 30d | 2026-09-27 | 11 | 0 | 0 | 0 | 0 | 0 |
-| last60d | 2026-08-28 | 21 | 0 | 0 | 0 | 0 | 0 |
-| 90d | 2026-07-29 | 31 | 0 | 0 | 0 | 0 | 0 |
-| last180d | 2026-04-30 | 66 | 0 | 0 | 0 | 0 | 0 |
-| 360d | 2025-11-01 | 100 | 0 | 0 | 0 | 0 | 0 |
-| last720d | 2024-11-06 | 100 | 0 | 0 | 0 | 0 | 0 |
+| 30d | 2026-09-28 | 11 | 0 | 0 | 0 | 0 | 0 |
+| last60d | 2026-08-29 | 21 | 0 | 0 | 0 | 0 | 0 |
+| 90d | 2026-07-30 | 31 | 0 | 0 | 0 | 0 | 0 |
+| last180d | 2026-05-01 | 66 | 0 | 0 | 0 | 0 | 0 |
+| 360d | 2025-11-02 | 100 | 0 | 0 | 0 | 0 | 0 |
+| last720d | 2024-11-07 | 100 | 0 | 0 | 0 | 0 | 0 |
 
 ## Release assets
 
@@ -70,4 +70,4 @@ Install metadata for notebooklm-mcp-cli lives in the [x-cmd/install](https://git
 
 The data on this page (card / loc / scorecard / release) is auto-collected by [x-cmd-install-action](https://github.com/x-cmd-install/x-cmd-install-action) and is regenerated daily. Improvements to *install behaviour* (which version gets installed, platform-specific quirks, dependencies) belong upstream in the index.
 
-_Snapshot: `data/card/261027.yml` · 2026-10-27T05:34:21Z._
+_Snapshot: `data/card/261028.yml` · 2026-10-28T06:01:32Z._
