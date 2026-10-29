@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 2607,
       "digest": "sha256:d0cfe693218355b946b08f9b7a75c8c238e55c6d830fb77e545385cf60600c5f",
-      "download_count": 26,
+      "download_count": 36,
       "created_at": "2026-10-25T23:46:16Z",
       "updated_at": "2026-10-25T23:46:16Z",
       "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.15.8/notebooklm-mcp-0.15.8.mcpb"
@@ -103,7 +103,7 @@
       "state": "uploaded",
       "size": 560211,
       "digest": "sha256:098ac98061247db98dfbd6ef8c1ac01e88323af3a286bc4761b2d1bc64f5f25b",
-      "download_count": 2,
+      "download_count": 3,
       "created_at": "2026-10-25T23:31:29Z",
       "updated_at": "2026-10-25T23:31:31Z",
       "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.15.8/notebooklm_mcp_cli-0.15.8-py3-none-any.whl"
