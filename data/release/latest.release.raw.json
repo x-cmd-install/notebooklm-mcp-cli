@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 2605,
       "digest": "sha256:3bdf8a810abbe7d8bce9924783f3160f11bcf033ad2c001150a6402bf3acaf45",
-      "download_count": 6,
+      "download_count": 19,
       "created_at": "2026-11-08T19:53:28Z",
       "updated_at": "2026-11-08T19:53:28Z",
       "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.2/notebooklm-mcp-0.16.2.mcpb"
