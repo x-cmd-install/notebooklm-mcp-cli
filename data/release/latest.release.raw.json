@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/438481582",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/438481582/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/438481582/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.2",
-  "id": 438481582,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/444734515",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/444734515/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/444734515/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.4",
+  "id": 444734515,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4aIrKu",
-  "tag_name": "v0.16.2",
+  "node_id": "RE_kwDOQtfMFM4aghwz",
+  "tag_name": "v0.16.4",
   "target_commitish": "main",
-  "name": "v0.16.2: safer setup errors and current notebook chat requests",
+  "name": "v0.16.4: login prompt fix for Typer 0.29",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-11-08T19:47:40Z",
-  "updated_at": "2026-11-08T19:53:28Z",
-  "published_at": "2026-11-08T19:51:29Z",
+  "created_at": "2026-11-13T21:01:47Z",
+  "updated_at": "2026-11-13T21:04:01Z",
+  "published_at": "2026-11-13T21:01:57Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/725023717",
-      "id": 725023717,
-      "node_id": "RA_kwDOQtfMFM4rNvvl",
-      "name": "notebooklm-mcp-0.16.2.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/745177394",
+      "id": 745177394,
+      "node_id": "RA_kwDOQtfMFM4saoEy",
+      "name": "notebooklm-mcp-0.16.4.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -65,16 +65,16 @@
       },
       "content_type": "application/octet-stream",
       "state": "uploaded",
-      "size": 2605,
-      "digest": "sha256:3bdf8a810abbe7d8bce9924783f3160f11bcf033ad2c001150a6402bf3acaf45",
-      "download_count": 49,
-      "created_at": "2026-11-08T19:53:28Z",
-      "updated_at": "2026-11-08T19:53:28Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.2/notebooklm-mcp-0.16.2.mcpb"
+      "size": 2606,
+      "digest": "sha256:420ed8a9883cad6d04011eecd96247c3d3158c5e9fb42060f81354222524cf3c",
+      "download_count": 2,
+      "created_at": "2026-11-13T21:04:01Z",
+      "updated_at": "2026-11-13T21:04:01Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.4/notebooklm-mcp-0.16.4.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.2",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.2",
-  "body": "# v0.16.2: safer setup errors and current notebook chat requests\n\n### Fixed\n\n- Empty or whitespace-only MCP client config files can now be initialized. Malformed JSON and TOML files remain untouched and are reported clearly. `nlm setup list` continues past an unreadable client config, while `nlm setup add` and `nlm setup remove` show the affected path instead of a traceback (#400).\n- Notebook chat sends the current 9-slot consumer request while preserving Enterprise behavior (#398). Live checks covered fresh conversations, follow-ups, selected sources, and citations. The previous request format also worked during verification, so treat this as a compatibility update rather than a confirmed fix for a production failure.\n\n### Credits\n\nThanks to @pengqun for #400 and the report in #399, and to @saariuslystoned for #398.\n",
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.4",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.4",
+  "body": "# v0.16.4: login storage question works on Typer 0.29\n\n### Changed\n\n- The CLI and MCP server reach shared core primitives only through the service layer. A new test fails on any direct `core/` import, so the boundary stays enforced (#405).\n\n### Fixed\n\n- Manual login reads cookies from Chrome DevTools \"Copy as cURL\" exports that pass them with `-b` or `--cookie`, including multiline input. Unrecognized input fails with a message naming the accepted formats (#403).\n- `nlm login` asked the new-login plain-or-protected question with a Click range type. Typer 0.29 no longer accepts that type, so the question ended the command with a bare `AssertionError`, and Typer 0.26 to 0.28 stopped on an out-of-range answer instead of asking again. The question now reads the number itself and repeats with \"Please enter 1 or 2.\" until the answer is valid. Enter still chooses protected ([#406](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/406), [#407](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/407)).\n\n### Credits\n\nThanks to @renepf for the fix and regression tests in #407, and to @Zir0-93 for the layering audit in #405.\n",
   "mentions_count": 2
 }
