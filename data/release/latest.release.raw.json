@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/445621971",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/445621971/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/445621971/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.5",
-  "id": 445621971,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.6",
+  "id": 454165132,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4aj6bT",
-  "tag_name": "v0.16.5",
+  "node_id": "RE_kwDOQtfMFM4bEgKM",
+  "tag_name": "v0.16.6",
   "target_commitish": "main",
-  "name": "v0.16.5: cookie file imports prefer .google.com values",
+  "name": "v0.16.6",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-11-14T22:05:42Z",
-  "updated_at": "2026-11-14T22:07:56Z",
-  "published_at": "2026-11-14T22:05:47Z",
+  "created_at": "2026-11-22T01:10:16Z",
+  "updated_at": "2026-11-22T03:23:24Z",
+  "published_at": "2026-11-22T03:21:36Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/748924121",
-      "id": 748924121,
-      "node_id": "RA_kwDOQtfMFM4so6zZ",
-      "name": "notebooklm-mcp-0.16.5.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/777730318",
+      "id": 777730318,
+      "node_id": "RA_kwDOQtfMFM4uWzkO",
+      "name": "notebooklm-mcp-0.16.6.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -66,15 +66,15 @@
       "content_type": "application/octet-stream",
       "state": "uploaded",
       "size": 2606,
-      "digest": "sha256:7fafb1d48ef9176bf24f45f09a04d9d6d3c6deb7c895df1da9a455c3e2d8fa58",
-      "download_count": 75,
-      "created_at": "2026-11-14T22:07:56Z",
-      "updated_at": "2026-11-14T22:07:56Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.5/notebooklm-mcp-0.16.5.mcpb"
+      "digest": "sha256:630fd9a2d0834160985830653ed163a45b096848670f35f4c29259908a205ac8",
+      "download_count": 1,
+      "created_at": "2026-11-22T03:23:23Z",
+      "updated_at": "2026-11-22T03:23:24Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.6/notebooklm-mcp-0.16.6.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.5",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.5",
-  "body": "# v0.16.5: cookie file imports prefer `.google.com` values\n\n### Fixed\n\n- `nlm login --file` now prefers the `.google.com` cookie when the same name appears on several Google domains in a Netscape or JSON export. Previously the last entry won, so an \"export all cookies\" file could save the `.youtube.com` values of `SID`, `HSID`, `SSID`, `APISID`, and `SAPISID`. The names were present, so validation passed, and the wrong values were then sent to Gemini Notebook. Imports now use the same domain preference as browser-exported cookies ([#408](https://github.com/jacob-bd/gemini-notebook-mcp-cli/issues/408), [#409](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/409)).\n\n### Credits\n\nThanks to @goranai for the precise reproduction and the fix with regression tests in #409.\n",
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.6",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.6",
+  "body": "\n### Changed\n\n- The `nlm setup` wizard now lists regular Claude Desktop and Relay AI / 3P Claude Desktop as two separate rows, each with its own connected status, instead of one \"Claude Desktop\" row that asked which profile afterwards. The Claude Code row is now labelled \"Claude Code (CLI, terminal)\" so it is not mistaken for Desktop's Code tab, which does not read `~/.claude.json` under Relay.\n- When the selected Claude Desktop instance is still running, the wizard now asks you to quit it and continue (or skip that tool) instead of aborting the connection. The write only happens once that instance has quit.\n\n### Fixed\n\n- Setup no longer writes the Relay AI / 3P Claude Desktop config while a Relay session is open. Relay launches the same Claude.app binary, so with no Code session open nothing in the process list said \"3P\" and the running check missed it; Claude then overwrote the new entry on exit. The check now also reads Relay's `deploymentMode` marker. The wizard also prints a next-step line after connecting Claude Desktop (restart, and launch Relay with `relay-ai claude-app`).\n- `check_firewall_rule()` in the WSL helpers now returns a real `bool`. It used to return the PowerShell output string when the rule existed. Callers only checked truthiness, so behaviour is unchanged, but the return value now matches its `-> bool` annotation, with regression tests ([#410](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/410)).\n\n### Credits\n\nThanks to **@insane66613** for the narrowly scoped WSL return-type fix and regression tests in [#410](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/410).\n\n",
   "mentions_count": 1
 }
