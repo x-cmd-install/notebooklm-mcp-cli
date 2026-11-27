@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132",
-  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132/assets",
-  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/454165132/assets{?name,label}",
-  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.6",
-  "id": 454165132,
+  "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/459758519",
+  "assets_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/459758519/assets",
+  "upload_url": "https://uploads.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/459758519/assets{?name,label}",
+  "html_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/tag/v0.16.9",
+  "id": 459758519,
   "author": {
     "login": "jacob-bd",
     "id": 47641890,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOQtfMFM4bEgKM",
-  "tag_name": "v0.16.6",
+  "node_id": "RE_kwDOQtfMFM4bZ1u3",
+  "tag_name": "v0.16.9",
   "target_commitish": "main",
-  "name": "v0.16.6",
+  "name": "v0.16.9: source URLs, citation IDs, and safer imports",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2026-11-22T01:10:16Z",
-  "updated_at": "2026-11-22T03:23:24Z",
-  "published_at": "2026-11-22T03:21:36Z",
+  "created_at": "2026-11-26T18:10:08Z",
+  "updated_at": "2026-11-26T18:12:04Z",
+  "published_at": "2026-11-26T18:10:15Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/777730318",
-      "id": 777730318,
-      "node_id": "RA_kwDOQtfMFM4uWzkO",
-      "name": "notebooklm-mcp-0.16.6.mcpb",
+      "url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/releases/assets/797131224",
+      "id": 797131224,
+      "node_id": "RA_kwDOQtfMFM4vg0HY",
+      "name": "notebooklm-mcp-0.16.9.mcpb",
       "label": "",
       "uploader": {
         "login": "github-actions[bot]",
@@ -65,16 +65,16 @@
       },
       "content_type": "application/octet-stream",
       "state": "uploaded",
-      "size": 2606,
-      "digest": "sha256:630fd9a2d0834160985830653ed163a45b096848670f35f4c29259908a205ac8",
-      "download_count": 52,
-      "created_at": "2026-11-22T03:23:23Z",
-      "updated_at": "2026-11-22T03:23:24Z",
-      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.6/notebooklm-mcp-0.16.6.mcpb"
+      "size": 2607,
+      "digest": "sha256:64c40ccc5226fed5bb2c8ac65d2e3dcf25e1306c5679d6e22273763fa0d4159e",
+      "download_count": 4,
+      "created_at": "2026-11-26T18:12:04Z",
+      "updated_at": "2026-11-26T18:12:04Z",
+      "browser_download_url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli/releases/download/v0.16.9/notebooklm-mcp-0.16.9.mcpb"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.6",
-  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.6",
-  "body": "\n### Changed\n\n- The `nlm setup` wizard now lists regular Claude Desktop and Relay AI / 3P Claude Desktop as two separate rows, each with its own connected status, instead of one \"Claude Desktop\" row that asked which profile afterwards. The Claude Code row is now labelled \"Claude Code (CLI, terminal)\" so it is not mistaken for Desktop's Code tab, which does not read `~/.claude.json` under Relay.\n- When the selected Claude Desktop instance is still running, the wizard now asks you to quit it and continue (or skip that tool) instead of aborting the connection. The write only happens once that instance has quit.\n\n### Fixed\n\n- Setup no longer writes the Relay AI / 3P Claude Desktop config while a Relay session is open. Relay launches the same Claude.app binary, so with no Code session open nothing in the process list said \"3P\" and the running check missed it; Claude then overwrote the new entry on exit. The check now also reads Relay's `deploymentMode` marker. The wizard also prints a next-step line after connecting Claude Desktop (restart, and launch Relay with `relay-ai claude-app`).\n- `check_firewall_rule()` in the WSL helpers now returns a real `bool`. It used to return the PowerShell output string when the rule existed. Callers only checked truthiness, so behaviour is unchanged, but the return value now matches its `-> bool` annotation, with regression tests ([#410](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/410)).\n\n### Credits\n\nThanks to **@insane66613** for the narrowly scoped WSL return-type fix and regression tests in [#410](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/410).\n\n",
-  "mentions_count": 1
+  "tarball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/tarball/v0.16.9",
+  "zipball_url": "https://api.github.com/repos/jacob-bd/gemini-notebook-mcp-cli/zipball/v0.16.9",
+  "body": "### Added\n\n- Notebook details include original URLs for web, YouTube, and URL-backed PDF sources when NotebookLM supplies them. ([#417](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/417))\n- Query citations expose the provider's passage identifier as optional `chunk_id` metadata. The identifier may repeat or change between queries. ([#418](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/418))\n\n### Fixed\n\n- Firefox login closes cookie database handles promptly, avoids blocking on unread browser output, and waits for a force-stopped Firefox process to exit. ([#423](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/423))\n- Cookie import accepts Chrome's Windows “Copy as cURL (cmd)” format while preserving literal carets in other cURL inputs and keeping the hint for cookie-file arguments. ([#416](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/416))\n- Incremental artifact downloads preserve files another download has already published, including exports saved under a PDF filename. ([#420](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/420))\n- Research status reports when an automatic import is unconfirmed. Automatic import requires the original task ID to match the completed provider task. A durable claim prevents repeat attempts within the same local profile and storage directory. ([#419](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/419))\n\n### Changed\n\n- Offline tests use temporary app-data and storage directories. Strict mode detects changes to real profile storage, and authenticated end-to-end tests require an explicit opt-in. ([#422](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/422))\n- GitHub Actions now uses `astral-sh/setup-uv` 10.4.0 for CI, release checks, and publishing. ([#413](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/413))\n\n### Credits\n\n- Thanks to **@FFXFF1** for the Firefox login fix ([#423](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/423)) and **@goranai** for Windows cURL cookie import ([#416](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/416)).\n- Thanks to **@insane66613** for source URLs ([#417](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/417)), citation IDs ([#418](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/418)), research auto-import ([#419](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/419)), download protection ([#420](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/420)), and test isolation ([#422](https://github.com/jacob-bd/gemini-notebook-mcp-cli/pull/422)).\n",
+  "mentions_count": 3
 }
