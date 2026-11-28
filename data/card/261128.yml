@@ -1,0 +1,115 @@
+about:
+  description: "Programmatic access to Gemini Notebook - via command-line interface (CLI), Model Context Protocol (MCP) server, and AI agent skills."
+  license: MIT
+  homepage: 
+  head: ef3bb8e
+  archived: false
+  latestVersion: "v0.16.9"
+  latestRelease: "v0.16.9"
+  latestPrerelease: ""
+  collectedAt: 2026-11-28T08:10:51Z
+timeline:
+  created: 2025-12-23
+  lastCommit: 2026-11-27
+  lastVersion: 2026-11-26
+  lastRelease: 2026-11-26
+  lastPrerelease: 
+popularity:
+  star: 6589
+  watcher: 43
+  fork: 992
+  release: 170
+  contributor: 67
+  pullRequest: 233
+  issue: 188
+language:
+  Python: 3487682
+totalBytes: 3487682
+recent:
+  last30d:
+    since: 2026-10-29
+    release: 8
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last60d:
+    since: 2026-09-29
+    release: 18
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last90d:
+    since: 2026-08-30
+    release: 29
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last180d:
+    since: 2026-06-01
+    release: 64
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last360d:
+    since: 2025-12-03
+    release: 100
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+  last720d:
+    since: 2024-12-08
+    release: 100
+    mergedPR: 0
+    openPR: 0
+    closedIssue: 0
+    openIssue: 0
+    commit: 0
+total:
+  release: 170
+  mergedPR: 185
+  openPR: 1
+  closedIssue: 188
+  openIssue: 0
+  commit: 1025
+---
+path: /home/runner/.x-repo/github.com/jacob-bd/notebooklm-mcp-cli
+collectedAt: 2026-11-28T08:10:58Z
+loc:
+  Python:
+    code: 75510
+    comments: 2935
+    blanks: 15125
+    files: 339
+  Json:
+    code: 83
+    comments: 0
+    blanks: 0
+    files: 1
+  Toml:
+    code: 79
+    comments: 5
+    blanks: 13
+    files: 1
+  Markdown:
+    code: 0
+    comments: 9639
+    blanks: 4227
+    files: 43
+total:
+  code: 77989
+  comments: 13153
+  blanks: 19725
+  files: 384
+---
+
+---
